@@ -1,0 +1,24 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "24ae81e8da4347a3af03804b869f2cad",
+    "Name": "GameContext",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "5852f858b381404d84a27554c82501b6",
+        "Name": "state",
+        "FieldType": { "Id": "1bff5adddd7c41de98d3329c7c641208", "Name": "String" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "24ae81e8da4347a3af03804b869f2cad", "Name": "GameContext" },
+        "Properties": {
+            "state": "Menu"
+        }
+    }
+}]

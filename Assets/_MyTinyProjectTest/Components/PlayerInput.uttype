@@ -1,0 +1,32 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "ed0843e881054972893e486757b78611",
+    "Name": "PlayerInput",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "77ee04610bdf48958877e94c125ff568",
+        "Name": "Axis",
+        "FieldType": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "9409bfab52f54fe3aedc56ab39fe00a1",
+        "Name": "Space",
+        "FieldType": { "Id": "2b477f505af74487b7092b5617d88d3f", "Name": "Boolean" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "ed0843e881054972893e486757b78611", "Name": "PlayerInput" },
+        "Properties": {
+            "Space": false
+        }
+    }
+}]

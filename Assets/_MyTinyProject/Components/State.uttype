@@ -1,0 +1,42 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "f23543501a2f4e7bbb86ad221c37dc28",
+    "Name": "State",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Enum",
+    "BaseType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+    "Fields": [{
+        "Id": "7daa4ea9a19b439386d45c913dbb456d",
+        "Name": "WAIT",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "daa18d30fbee4bd2be305d75049bdf9e",
+        "Name": "GET_JUDGE_CARD",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "8b4f6e980e3c4e779e00fff8dd1f5b26",
+        "Name": "INIT",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "f23543501a2f4e7bbb86ad221c37dc28", "Name": "State" },
+        "Properties": {
+            "GET_JUDGE_CARD": 1,
+            "INIT": 2
+        }
+    }
+}]

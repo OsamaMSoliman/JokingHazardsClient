@@ -1,0 +1,55 @@
+﻿[{
+    "$TypeId": 4,
+    "Id": "054b4fcf1fce4c33acbd9124c937c836",
+    "Name": "BootStrap",
+    "ExportFlags": 0,
+    "SerializedVersion": 0,
+    "Entities": [
+        { "$TypeId": 9, "Id": "be8c5f8d889a48f1bff028ae75ffab98", "Name": "Camera" },
+        { "$TypeId": 9, "Id": "e98ca5d083cc4cefa44d81df870f1710", "Name": "GameManager" }
+    ]
+},
+{
+    "$TypeId": 5,
+    "Id": "be8c5f8d889a48f1bff028ae75ffab98",
+    "Name": "Camera",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "12692383f3fef3bb74c209888c5b0939", "Name": "Camera2D" },
+        "Properties": {
+            "backgroundColor": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 0,
+                    "g": 0.4436121,
+                    "b": 1,
+                    "a": 1
+                }
+            },
+            "clearFlags": {
+                "$TypeId": 8,
+                "Type": { "Id": "76a06ddd38e99125d930e77c6a287872", "Name": "CameraClearFlags" },
+                "Id": "9faedc246f34513076701ef66b5ad74f",
+                "Name": "SolidColor",
+                "Value": 1
+            }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "e98ca5d083cc4cefa44d81df870f1710",
+    "Name": "GameManager",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "24ae81e8da4347a3af03804b869f2cad", "Name": "GameContext" }
+    }, {
+        "Type": { "Id": "ed0843e881054972893e486757b78611", "Name": "PlayerInput" }
+    }]
+}]

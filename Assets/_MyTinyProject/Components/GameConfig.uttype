@@ -1,0 +1,87 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "efcb5493c7de4742b2d8d6cfe67b7d08",
+    "Name": "GameConfig",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Configuration",
+    "Fields": [{
+        "Id": "413a7dd723444f46a90fb3aa6ed96a9a",
+        "Name": "PlayerId",
+        "FieldType": { "Id": "1bff5adddd7c41de98d3329c7c641208", "Name": "String" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "88f7919712904371ad296d52f05e71fb",
+        "Name": "RoomId",
+        "FieldType": { "Id": "1bff5adddd7c41de98d3329c7c641208", "Name": "String" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "06de2c7be71742be8980b48574803b43",
+        "Name": "IsJudge",
+        "FieldType": { "Id": "2b477f505af74487b7092b5617d88d3f", "Name": "Boolean" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "b9ed904f3518454d97b4d9730f66a1b1",
+        "Name": "FieldCards",
+        "Documentation": {
+            "Summary": "the 3 cards on the feild"
+        },
+        "FieldType": { "Id": "1bff5adddd7c41de98d3329c7c641208", "Name": "String" },
+        "Array": true,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "63344a35bfee49c4b57ac3c16dff149a",
+        "Name": "CanPlay",
+        "FieldType": { "Id": "2b477f505af74487b7092b5617d88d3f", "Name": "Boolean" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "c22e6e59599e4507b0ba717e3792ee0d",
+        "Name": "HandCards",
+        "Documentation": {
+            "Summary": "the 7 cards in hand"
+        },
+        "FieldType": { "Id": "1bff5adddd7c41de98d3329c7c641208", "Name": "String" },
+        "Array": true,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "d52a6a7915e141eaa1f828fc42432408",
+        "Name": "State",
+        "FieldType": { "Id": "f23543501a2f4e7bbb86ad221c37dc28", "Name": "State" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "efcb5493c7de4742b2d8d6cfe67b7d08", "Name": "GameConfig" },
+        "Properties": {
+            "FieldCards": {
+                "Type": { "Id": "1bff5adddd7c41de98d3329c7c641208", "Name": "String" }
+            },
+            "State": {
+                "$TypeId": 8,
+                "Type": { "Id": "f23543501a2f4e7bbb86ad221c37dc28", "Name": "State" },
+                "Id": "8b4f6e980e3c4e779e00fff8dd1f5b26",
+                "Name": "INIT",
+                "Value": 2
+            }
+        }
+    }
+}]

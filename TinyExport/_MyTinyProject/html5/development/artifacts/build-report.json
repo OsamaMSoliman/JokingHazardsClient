@@ -1,0 +1,118 @@
+﻿{
+    "Item": {
+        "Name": "Project",
+        "Size": 0,
+        "CompressedSize": 0
+    },
+    "Children": [{
+        "Item": {
+            "Name": "Runtime",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/_MyTinyProject/html5/development/build/runtime.js",
+                "Size": 5664364,
+                "CompressedSize": 700818
+            }
+        }]
+    }, {
+        "Item": {
+            "Name": "Assets",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "JavaScript",
+                "Size": 312812,
+                "CompressedSize": 0
+            }
+        }, {
+            "Item": {
+                "Name": "sactx-2048x2048-Uncompressed-JokingHazardSpriteAtlas-686f0fb3",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/_MyTinyProject/html5/development/artifacts/assets/sactx-2048x2048-Uncompressed-JokingHazardSpriteAtlas-686f0fb3.jpg",
+                    "Size": 818788,
+                    "CompressedSize": 532068,
+                    "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 9, "Type": 0 }
+                }
+            }, {
+                "Item": {
+                    "Name": "TinyExport/_MyTinyProject/html5/development/artifacts/assets/sactx-2048x2048-Uncompressed-JokingHazardSpriteAtlas-686f0fb3_a.png",
+                    "Size": 82340,
+                    "CompressedSize": 2263,
+                    "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 9, "Type": 0 }
+                }
+            }]
+        }]
+    }, {
+        "Item": {
+            "Name": "Code",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/_MyTinyProject/html5/development/build/entities.js",
+                "Size": 15294,
+                "CompressedSize": 2235
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "CardsInHand",
+                    "Size": 8298,
+                    "CompressedSize": 1452
+                }
+            }, {
+                "Item": {
+                    "Name": "CardsPlayed",
+                    "Size": 3315,
+                    "CompressedSize": 754
+                }
+            }, {
+                "Item": {
+                    "Name": "Start",
+                    "Size": 3599,
+                    "CompressedSize": 957
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/_MyTinyProject/html5/development/build/bindings.js",
+                "Size": 92467,
+                "CompressedSize": 7548
+            }
+        }, {
+            "Item": {
+                "Name": "Linked Code Files",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/_MyTinyProject/html5/development/artifacts/scripts/tsc-emit.js",
+                    "Size": 14775,
+                    "CompressedSize": 3910
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/_MyTinyProject/html5/development/build/main.js",
+                "Size": 2513,
+                "CompressedSize": 835
+            }
+        }, {
+            "Item": {
+                "Name": "TinyExport/_MyTinyProject/html5/development/build/wsclient.js",
+                "Size": 9651,
+                "CompressedSize": 2635
+            }
+        }]
+    }]
+}

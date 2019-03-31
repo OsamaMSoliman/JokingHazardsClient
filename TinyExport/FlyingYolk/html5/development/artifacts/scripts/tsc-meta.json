@@ -1,0 +1,364 @@
+{
+    "Success": true,
+    "Diagnostics": [],
+    "Systems": [
+        {
+            "Name": "AutoDestroySystem",
+            "QualifiedName": "game.AutoDestroySystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/AutoDestroySystem.ts",
+                "Line": 8,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "ut.Core2D.TransformNode",
+                "ut.Core2D.TransformLocalPosition",
+                "game.AutoDestroy"
+            ]
+        },
+        {
+            "Name": "NumberTextRenderingSystem",
+            "QualifiedName": "game.NumberTextRenderingSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/NumberTextRenderingSystem.ts",
+                "Line": 6,
+                "Character": 15
+            },
+            "ExecuteBefore": [
+                "ut.Shared.RenderingFence"
+            ],
+            "RequiredComponents": [
+                "game.NumberTextRenderer"
+            ],
+            "OptionalComponents": [
+                "ut.Core2D.Sprite2DRenderer",
+                "ut.Core2D.TransformLocalPosition"
+            ]
+        },
+        {
+            "Name": "GameNumberTextValueSystem",
+            "QualifiedName": "game.GameNumberTextValueSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/GameConfigTextValueSystem.ts",
+                "Line": 8,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd",
+                "game.NumberTextRenderingSystem"
+            ],
+            "RequiredComponents": [
+                "game.NumberTextRenderer",
+                "game.GameConfigTextValue"
+            ]
+        },
+        {
+            "Name": "GameManagerSystem",
+            "QualifiedName": "game.GameManagerSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/GameManagerSystem.ts",
+                "Line": 5,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ]
+        },
+        {
+            "Name": "GameOverSystem",
+            "QualifiedName": "game.GameOverSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/GameOverSystem.ts",
+                "Line": 6,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.PlayerInput",
+                "ut.HitBox2D.HitBoxOverlapResults",
+                "ut.Core2D.Sprite2DSequencePlayer"
+            ]
+        },
+        {
+            "Name": "GravitySystem",
+            "QualifiedName": "game.GravitySystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/GravitySystem.ts",
+                "Line": 6,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.Gravity",
+                "game.Velocity"
+            ]
+        },
+        {
+            "Name": "GroundCollisionSystem",
+            "QualifiedName": "game.GroundCollisionSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/GroundCollisionSystem.ts",
+                "Line": 6,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.Velocity",
+                "ut.HitBox2D.HitBoxOverlapResults"
+            ]
+        },
+        {
+            "Name": "PlayerInputSystem",
+            "QualifiedName": "game.PlayerInputSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/PlayerInputSystem.ts",
+                "Line": 6,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.PlayerInput",
+                "game.Velocity"
+            ]
+        },
+        {
+            "Name": "ScrollerSystem",
+            "QualifiedName": "game.ScrollerSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/ScrollerSystem.ts",
+                "Line": 6,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "ut.Core2D.TransformLocalPosition",
+                "game.Scroller"
+            ]
+        },
+        {
+            "Name": "RepeatingBackgroundSystem",
+            "QualifiedName": "game.RepeatingBackgroundSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/RepeatingBackgroundSystem.ts",
+                "Line": 6,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "game.ScrollerSystem"
+            ],
+            "RequiredComponents": [
+                "ut.Core2D.TransformLocalPosition",
+                "game.RepeatingBackground"
+            ]
+        },
+        {
+            "Name": "ScorePointSystem",
+            "QualifiedName": "game.ScorePointSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/ScorePointSystem.ts",
+                "Line": 7,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.ScorePoint"
+            ],
+            "OptionalComponents": [
+                "ut.Audio.AudioSource"
+            ]
+        },
+        {
+            "Name": "SpawnerSystem",
+            "QualifiedName": "game.SpawnerSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/SpawnerSystem.ts",
+                "Line": 8,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart",
+                "game.RepeatingBackgroundSystem"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.Spawner"
+            ]
+        },
+        {
+            "Name": "SkinSystem",
+            "QualifiedName": "game.SkinSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/SkinSystem.ts",
+                "Line": 8,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart",
+                "game.SpawnerSystem"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "ut.Core2D.Sprite2DRenderer",
+                "ut.Core2D.Sprite2DSequence"
+            ]
+        },
+        {
+            "Name": "PipeSpacingSystem",
+            "QualifiedName": "game.PipeSpacingSystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/SpacingSystem.ts",
+                "Line": 7,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.Spacing"
+            ],
+            "OptionalComponents": [
+                "ut.Core2D.TransformLocalPosition"
+            ]
+        },
+        {
+            "Name": "VelocitySystem",
+            "QualifiedName": "game.VelocitySystem",
+            "Description": "",
+            "Source": {
+                "File": "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/VelocitySystem.ts",
+                "Line": 6,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.PlayerInput",
+                "game.Velocity"
+            ]
+        }
+    ],
+    "Filters": [],
+    "Behaviours": [],
+    "Performance": [
+        {
+            "Key": "tsconfig",
+            "Description": "Time taken to read and parse the given tsconfig.json file",
+            "Duration": 50,
+            "Steps": 1
+        },
+        {
+            "Key": "checksum",
+            "Description": "Time taken to compute the MD5 of all inputs",
+            "Duration": 120,
+            "Steps": 1
+        },
+        {
+            "Key": "compile",
+            "Description": "Time taken to compile the TypeScript program",
+            "Duration": 574,
+            "Steps": 26
+        },
+        {
+            "Key": "emit",
+            "Description": "Time taken to generate and write the JavaScript output",
+            "Duration": 106,
+            "Steps": 2
+        },
+        {
+            "Key": "metadata",
+            "Description": "Time taken to reflect Tiny metadata from the compiled program",
+            "Duration": 10,
+            "Steps": 15
+        }
+    ],
+    "SourceFiles": [
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/AudioService.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/AutoDestroySystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/NumberTextRenderingSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/GameConfigTextValueSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/GameManagerSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/GameOverSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/GameService.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/GravitySystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/GroundCollisionSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/PlayerInputSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/ScrollerSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/RepeatingBackgroundSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/ScorePointSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/SpawnerSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/SkinSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/SpacingSystem.ts",
+        "F:/UnityProjects/TinyUnity/Assets/TinySamples/FlyingYolk/Scripts/VelocitySystem.ts",
+        "F:/UnityProjects/TinyUnity/Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
+        "F:/UnityProjects/TinyUnity/Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
+    ],
+    "InputHash": "2a1eb837a16a47d55ac1c1a70ef99438",
+    "GeneratedAt": "Tue Mar 19 2019 10:28:11 GMT+0200 (Egypt Standard Time)"
+}
