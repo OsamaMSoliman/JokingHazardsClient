@@ -30,7 +30,6 @@ entities.game.CardsInHand.load = function(world) {
     c1.position = s0;
     world.setComponentData(e0, c1);
     var c2 = new ut.Core2D.Sprite2DRenderer();
-    c2.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_0_0');
     var s1 = new ut.Core2D.Color();
     s1.r = 1;
     s1.g = 1;
@@ -61,7 +60,6 @@ entities.game.CardsInHand.load = function(world) {
     c7.position = s3;
     world.setComponentData(e1, c7);
     var c8 = new ut.Core2D.Sprite2DRenderer();
-    c8.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_0_0');
     var s4 = new ut.Core2D.Color();
     s4.r = 1;
     s4.g = 1;
@@ -94,7 +92,6 @@ entities.game.CardsInHand.load = function(world) {
     c13.position = s6;
     world.setComponentData(e2, c13);
     var c14 = new ut.Core2D.Sprite2DRenderer();
-    c14.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_0_0');
     var s7 = new ut.Core2D.Color();
     s7.r = 1;
     s7.g = 1;
@@ -127,7 +124,6 @@ entities.game.CardsInHand.load = function(world) {
     c19.position = s9;
     world.setComponentData(e3, c19);
     var c20 = new ut.Core2D.Sprite2DRenderer();
-    c20.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_0_0');
     var s10 = new ut.Core2D.Color();
     s10.r = 1;
     s10.g = 1;
@@ -160,7 +156,6 @@ entities.game.CardsInHand.load = function(world) {
     c25.position = s12;
     world.setComponentData(e4, c25);
     var c26 = new ut.Core2D.Sprite2DRenderer();
-    c26.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_0_0');
     var s13 = new ut.Core2D.Color();
     s13.r = 1;
     s13.g = 1;
@@ -193,7 +188,6 @@ entities.game.CardsInHand.load = function(world) {
     c31.position = s15;
     world.setComponentData(e5, c31);
     var c32 = new ut.Core2D.Sprite2DRenderer();
-    c32.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_0_0');
     var s16 = new ut.Core2D.Color();
     s16.r = 1;
     s16.g = 1;
@@ -226,7 +220,6 @@ entities.game.CardsInHand.load = function(world) {
     c37.position = s18;
     world.setComponentData(e6, c37);
     var c38 = new ut.Core2D.Sprite2DRenderer();
-    c38.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_0_0');
     var s19 = new ut.Core2D.Color();
     s19.r = 1;
     s19.g = 1;
@@ -271,7 +264,7 @@ entities.game.CardsPlayed.load = function(world) {
     c1.position = s0;
     world.setComponentData(e0, c1);
     var c2 = new ut.Core2D.Sprite2DRenderer();
-    c2.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_0_0');
+    c2.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_Cover');
     var s1 = new ut.Core2D.Color();
     s1.r = 1;
     s1.g = 1;
@@ -299,7 +292,7 @@ entities.game.CardsPlayed.load = function(world) {
     c6.position = s3;
     world.setComponentData(e1, c6);
     var c7 = new ut.Core2D.Sprite2DRenderer();
-    c7.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_0_0');
+    c7.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_Cover');
     var s4 = new ut.Core2D.Color();
     s4.r = 1;
     s4.g = 1;
@@ -328,7 +321,7 @@ entities.game.CardsPlayed.load = function(world) {
     c11.position = s6;
     world.setComponentData(e2, c11);
     var c12 = new ut.Core2D.Sprite2DRenderer();
-    c12.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_0_0');
+    c12.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_Cover');
     var s7 = new ut.Core2D.Color();
     s7.r = 1;
     s7.g = 1;
@@ -401,7 +394,6 @@ entities.game.Start.load = function(world) {
     c5.position = s3;
     world.setComponentData(e1, c5);
     var c6 = new ut.Core2D.Sprite2DRenderer();
-    c6.sprite = ut.EntityLookupCache.getByName(world, 'assets/sprites/JokingHazardSpriteAtlas/Page_0_0');
     var s4 = new ut.Core2D.Color();
     s4.r = 1;
     s4.g = 1;

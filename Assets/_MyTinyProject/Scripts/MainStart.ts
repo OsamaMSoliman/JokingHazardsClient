@@ -2,25 +2,31 @@ namespace game {
     /** New System function as the main/starting point and Manage Cards */
     export class MainStart extends ut.ComponentSystem {
 
-        private start: boolean = true
-        private round: number = 0
-        private nextRound: number = 0
-
         OnUpdate(): void {
-        //     if (this.start) {
-        //         Utils.RequestInitFromServer(this.world)
-        //         entities.game.CardsPlayed.load(this.world)
-        //         entities.game.CardsInHand.load(this.world)
-        //         this.start = false 
-        //     } else if (this.round < this.nextRound) {
-        //         this.round = this.nextRound
-        //         Utils.GetJudgeCard()
+            if (Utils.GameConfig == null) {
+                Utils.RequestInitFromServer(this.world)
+                entities.game.CardsPlayed.load(this.world)
+                entities.game.CardsInHand.load(this.world)
+                Utils.UpdateCardsTextures(this.world) // temp as the game init
+            } else {
+                switch (Utils.GameConfig.State) {
+                    case State.GET_JUDGE_CARD:
+                        Utils.GameConfig.State = State.WAIT
+                        Utils.GetJudgeCard(this.world)
+                        break;
 
-        //         // this.world.forEach([ut.Core2D.Sprite2DRenderer, game.CardTag], (renderer, tag) => {
-        //         //     const arr = tag.IsInHand ? Utils.GameConfig.HandCards : Utils.GameConfig.FieldCards
-        //         //     renderer.sprite = Utils.getImageById(this.world, arr[tag.Position])
-        //         // })
-        //     }
+                    case State.SEND_CARD:
+                        Utils.GameConfig.State = State.WAIT
+                        setTimeout(() => {
+                            Utils.GameConfig.CanPlay = true
+                        }, Utils.GameConfig.IsJudge ? 2500 : 100);
+                        break;
+
+                    case State.WAIT:
+                    default:
+                        break;
+                }
+            }
         }
     }
 }

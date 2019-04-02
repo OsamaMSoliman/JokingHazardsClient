@@ -60,7 +60,7 @@
         { "Id": "8c6be6e8b11c20a446e356fb3e17ffb1", "Name": "UTiny.Tilemap2D" }
     ],
     "Assets": [{
-        "Object": { "$TypeId": 10, "Guid": "7ed1198534eb21949b46a6876ef0a72c", "FileId": 21300000, "Type": 3 }
+        "Object": { "$TypeId": 10, "Guid": "29fc44cdaac267c408caccfd4c8777b6", "FileId": 21300000, "Type": 3 }
     }],
     "StartupEntityGroup": { "Id": "4c88cd77ab9e4043bc1e9d2f6a85f3b8", "Name": "NewEntityGroup" }
 },

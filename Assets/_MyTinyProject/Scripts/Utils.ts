@@ -5,8 +5,8 @@ namespace game {
 
         static readonly AtlasName = "JokingHazardSpriteAtlas"
         static readonly AtlasPageSize = 18
-        static readonly ServerIP: string = "http://localhost:2888/"
-        static GameConfig: game.GameConfig
+        static readonly ServerIP: string = "https://jokinghazards.herokuapp.com/"
+        static GameConfig: game.GameConfig = null
 
         static getPointerWorldPosition(world: ut.World, cameraEntity: ut.Entity): Vector3 {
             const displayInfo = world.getConfigData(ut.Core2D.DisplayInfo);
@@ -29,14 +29,18 @@ namespace game {
 
         static getRandomInt(max: number = Utils.AtlasPageSize): number { return Math.floor(Math.random() * Math.floor(max)); }
 
+        private static GetNewRandomCard() { return `${Utils.getRandomInt()}_${Utils.getRandomInt()}` }
+
         static RequestInitFromServer(world: ut.World) {
+            Utils.GameConfig = world.getConfigData(game.GameConfig)
+            Utils.GameConfig.FieldCards = ["-1", "-1", "-1"];
+            for (let i = 0; i < 7; i++)
+                Utils.GameConfig.HandCards[i] = Utils.GetNewRandomCard();
+
             fetch(Utils.ServerIP)
                 .then(res => res.json())
                 .then((json) => {
                     const data: InitMsg = json
-                    Utils.GameConfig = world.getConfigData(game.GameConfig)
-                    // gameConfig.FieldCards = new Array(3);
-                    // gameConfig.HandCards = new Array(7);
                     Utils.GameConfig.RoomId = data.roomId
                     Utils.GameConfig.PlayerId = data.playerId
                     Utils.GameConfig.IsJudge = data.isJudge
@@ -44,11 +48,12 @@ namespace game {
                     Utils.GameConfig.CanPlay = data.isJudge
 
                     Utils.UpdateCardsTextures(world)
+                    Utils.GameConfig.State = data.isJudge ? State.SEND_CARD : State.GET_JUDGE_CARD
                 })
                 .catch(console.log)
         }
 
-        private static postObject(data: object) {
+        private static postObject(data: MidMatchMsg) {
             data["roomId"] = Utils.GameConfig.RoomId
             data["playerId"] = Utils.GameConfig.PlayerId
             return {
@@ -66,15 +71,38 @@ namespace game {
         //     Utils.GameConfig.FieldCards[1] = json1.listOfCardIds
         // }
 
-        static GetJudgeCard() {
-            fetch(Utils.ServerIP, Utils.postObject({ cardId: "-1" }))
-            .then(res=>res.json())
-            .then(json=>{
-                Utils.GameConfig.FieldCards[1] = json.listOfCardIds
-            })
+        static GetJudgeCard(world: ut.World) {
+            fetch(Utils.ServerIP, Utils.postObject({ cardId: "-1" } as MidMatchMsg))
+                .then(res => res.json())
+                .then(json => {
+                    Utils.GameConfig.FieldCards[1] = json.listOfCardIds[0]
+                    Utils.UpdateCardsTextures(world)
+                    Utils.GameConfig.State = State.SEND_CARD
+                })
         }
 
-        private static UpdateCardsTextures(world: ut.World) {
+        static SendSelectdCardToServer(selectdCardPos: number) {
+            Utils.GameConfig.CanPlay = false
+            const temp = Utils.GameConfig.HandCards[selectdCardPos]
+            Utils.GameConfig.HandCards[selectdCardPos] = Utils.GetNewRandomCard()
+
+            fetch(Utils.ServerIP, Utils.postObject({ cardId: temp } as MidMatchMsg))
+                .then(res => res.json())
+                .then(json => {
+
+                    if (Utils.GameConfig.IsJudge) {
+                        // TODO:
+
+                    } else {
+
+                    }
+                    // Utils.GameConfig.FieldCards[1] = json.listOfCardIds[0]
+                    // Utils.UpdateCardsTextures(world)
+                    // Utils.GameConfig.State = State.SEND_CARD
+                })
+        }
+
+        static UpdateCardsTextures(world: ut.World) {
             world.forEach([ut.Core2D.Sprite2DRenderer, game.CardTag], (renderer, tag) => {
                 const arr = tag.IsInHand ? Utils.GameConfig.HandCards : Utils.GameConfig.FieldCards
                 renderer.sprite = Utils.getImageById(world, arr[tag.Position])

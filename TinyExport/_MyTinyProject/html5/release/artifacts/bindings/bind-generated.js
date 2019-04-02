@@ -1,8 +1,6 @@
 /*
  * AUTO-GENERATED, DO NOT EDIT BY HAND
  */
-// In order to process bindings, we first need type registry from compiled code to be available.
-ut.meta.registerTypes();
 var game = game || {};
 game.State = {
   INIT: 0,
@@ -10,15 +8,6 @@ game.State = {
   GET_JUDGE_CARD: 2,
   SEND_CARD: 3
 };
-game.State._typeDesc = (function() {
-  var enumType = ut.meta.getType('int32');
-  return ut.meta.allocType(6, 'game.State', 4, [
-    {name: 'INIT', offset: 0, type: enumType},
-    {name: 'WAIT', offset: 1, type: enumType},
-    {name: 'GET_JUDGE_CARD', offset: 2, type: enumType},
-    {name: 'SEND_CARD', offset: 3, type: enumType}
-  ]);
-})();
 var entities = entities || {};
 entities.game = entities.game || {};
 entities.game.CardsInHand = entities.game.CardsInHand || {};
@@ -60,10 +49,7 @@ Object.defineProperties(entities.game.CardsInHand.Component.StorageView.prototyp
 });
 entities.game.CardsInHand.Component._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // entities.game.CardsInHand.Component is a POD type, so a JavaScript side copy constructor entities.game.CardsInHand.Component._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-entities.game.CardsInHand.Component._typeDesc = (function() {
-  return ut.meta.allocType(5, 'entities.game.CardsInHand.Component', 1, []);
-})();
-Object.defineProperties(entities.game.CardsInHand.Component, { cid: { configurable: true, get: function() { delete entities.game.CardsInHand.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.CardsInHand.Component.cid = Module._ut_component_register_cid_with_type(entities.game.CardsInHand.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(entities.game.CardsInHand.Component, { cid: { configurable: true, get: function() { delete entities.game.CardsInHand.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.CardsInHand.Component.cid = Module._ut_component_register_cid(/*entities.game.CardsInHand.Component*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"entities::game::CardsInHand::Component"*/, 0, 0); } } });
 Object.defineProperties(entities.game.CardsInHand.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.CardsInHand.Component.cid; } } });
 entities.game.CardsPlayed = entities.game.CardsPlayed || {};
 entities.game.CardsPlayed.Component = function() {
@@ -104,10 +90,7 @@ Object.defineProperties(entities.game.CardsPlayed.Component.StorageView.prototyp
 });
 entities.game.CardsPlayed.Component._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // entities.game.CardsPlayed.Component is a POD type, so a JavaScript side copy constructor entities.game.CardsPlayed.Component._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-entities.game.CardsPlayed.Component._typeDesc = (function() {
-  return ut.meta.allocType(5, 'entities.game.CardsPlayed.Component', 1, []);
-})();
-Object.defineProperties(entities.game.CardsPlayed.Component, { cid: { configurable: true, get: function() { delete entities.game.CardsPlayed.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.CardsPlayed.Component.cid = Module._ut_component_register_cid_with_type(entities.game.CardsPlayed.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(entities.game.CardsPlayed.Component, { cid: { configurable: true, get: function() { delete entities.game.CardsPlayed.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.CardsPlayed.Component.cid = Module._ut_component_register_cid(/*entities.game.CardsPlayed.Component*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"entities::game::CardsPlayed::Component"*/, 0, 0); } } });
 Object.defineProperties(entities.game.CardsPlayed.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.CardsPlayed.Component.cid; } } });
 entities.game.Start = entities.game.Start || {};
 entities.game.Start.Component = function() {
@@ -148,10 +131,7 @@ Object.defineProperties(entities.game.Start.Component.StorageView.prototype, {
 });
 entities.game.Start.Component._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // entities.game.Start.Component is a POD type, so a JavaScript side copy constructor entities.game.Start.Component._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-entities.game.Start.Component._typeDesc = (function() {
-  return ut.meta.allocType(5, 'entities.game.Start.Component', 1, []);
-})();
-Object.defineProperties(entities.game.Start.Component, { cid: { configurable: true, get: function() { delete entities.game.Start.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.Start.Component.cid = Module._ut_component_register_cid_with_type(entities.game.Start.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(entities.game.Start.Component, { cid: { configurable: true, get: function() { delete entities.game.Start.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.Start.Component.cid = Module._ut_component_register_cid(/*entities.game.Start.Component*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"entities::game::Start::Component"*/, 0, 0); } } });
 Object.defineProperties(entities.game.Start.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.Start.Component.cid; } } });
 game.CardTag = function(arg0, arg1) {
   this._Position = (arg0|0);
@@ -215,13 +195,7 @@ Object.defineProperties(game.CardTag.StorageView.prototype, {
 });
 game.CardTag._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // game.CardTag is a POD type, so a JavaScript side copy constructor game.CardTag._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-game.CardTag._typeDesc = (function() {
-  return ut.meta.allocType(5, 'game.CardTag', 2, [
-    {name: 'Position', offset: 0, type: ut.meta.getType('int8')},
-    {name: 'IsInHand', offset: 1, type: ut.meta.getType('bool')}
-  ]);
-})();
-Object.defineProperties(game.CardTag, { cid: { configurable: true, get: function() { delete game.CardTag.cid; var offsetsPtr = 0, offsetsCount = 0; return game.CardTag.cid = Module._ut_component_register_cid_with_type(game.CardTag._typeDesc, 1, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.CardTag, { cid: { configurable: true, get: function() { delete game.CardTag.cid; var offsetsPtr = 0, offsetsCount = 0; return game.CardTag.cid = Module._ut_component_register_cid(/*game.CardTag*/ 2, 1, 0, offsetsPtr, offsetsCount, 0/*"game::CardTag"*/, 0, 0); } } });
 Object.defineProperties(game.CardTag.StorageView, { cid: { configurable: true, get: function() { return game.CardTag.cid; } } });
 game.CardTag.Position = { $ofs:0, $t:"int8_t", $c:game.CardTag };
 game.CardTag.IsInHand = { $ofs:1, $t:"bool", $c:game.CardTag };
@@ -353,8 +327,6 @@ game.GameConfig._dtorFn = function dtor(ptr) {
   Module._ut_nativebuffer_nativestring_placement_delete(ptr + 36);
 };
 game.GameConfig._copyFn = function copy(src, dst) {
-  if (!src) throw 'copy function src ptr is null!';
-  if (!dst) throw 'copy function dst ptr is null!';
   Module._ut_nativestring_copy_construct(dst + 0, src + 0);
   Module._ut_nativestring_copy_construct(dst + 8, src + 8);
   for(var i = 0; i < 1; ++i) HEAPU8[dst+16+i] = HEAPU8[src+16+i];
@@ -363,18 +335,7 @@ game.GameConfig._copyFn = function copy(src, dst) {
   Module._ut_nativebuffer_nativestring_copy_construct(dst + 36, src + 36);
   for(var i = 0; i < 4; ++i) HEAPU8[dst+48+i] = HEAPU8[src+48+i];
 };
-game.GameConfig._typeDesc = (function() {
-  return ut.meta.allocType(5, 'game.GameConfig', 52, [
-    {name: 'PlayerId', offset: 0, type: ut.meta.getType('string')},
-    {name: 'RoomId', offset: 8, type: ut.meta.getType('string')},
-    {name: 'IsJudge', offset: 16, type: ut.meta.getType('bool')},
-    {name: 'FieldCards', offset: 20, type: ut.meta.getType('ut.NativeBuffer<string>')},
-    {name: 'CanPlay', offset: 32, type: ut.meta.getType('bool')},
-    {name: 'HandCards', offset: 36, type: ut.meta.getType('ut.NativeBuffer<string>')},
-    {name: 'State', offset: 48, type: ut.meta.getType('game.State')}
-  ]);
-})();
-Object.defineProperties(game.GameConfig, { cid: { configurable: true, get: function() { delete game.GameConfig.cid; var offsetsPtr = 0, offsetsCount = 0; return game.GameConfig.cid = Module._ut_component_register_cid_with_type(game.GameConfig._typeDesc, 4, 0, offsetsPtr, offsetsCount, ut.DestructorFn._cb.token_for(game.GameConfig._dtorFn), ut.CopyFn._cb.token_for(game.GameConfig._copyFn)); } } });
+Object.defineProperties(game.GameConfig, { cid: { configurable: true, get: function() { delete game.GameConfig.cid; var offsetsPtr = 0, offsetsCount = 0; return game.GameConfig.cid = Module._ut_component_register_cid(/*game.GameConfig*/ 52, 4, 0, offsetsPtr, offsetsCount, 0/*"game::GameConfig"*/, ut.DestructorFn._cb.token_for(game.GameConfig._dtorFn), ut.CopyFn._cb.token_for(game.GameConfig._copyFn)); } } });
 Object.defineProperties(game.GameConfig.StorageView, { cid: { configurable: true, get: function() { return game.GameConfig.cid; } } });
 game.GameConfig.PlayerId = { $ofs:0, $t:"System.String", $c:game.GameConfig };
 game.GameConfig.RoomId = { $ofs:8, $t:"System.String", $c:game.GameConfig };
@@ -424,10 +385,7 @@ Object.defineProperties(ut.Core2D.layers.Default.StorageView.prototype, {
 });
 ut.Core2D.layers.Default._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // ut.Core2D.layers.Default is a POD type, so a JavaScript side copy constructor ut.Core2D.layers.Default._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-ut.Core2D.layers.Default._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.Core2D.layers.Default', 1, []);
-})();
-Object.defineProperties(ut.Core2D.layers.Default, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.Default.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.Default.cid = Module._ut_component_register_cid_with_type(ut.Core2D.layers.Default._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(ut.Core2D.layers.Default, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.Default.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.Default.cid = Module._ut_component_register_cid(/*ut.Core2D.layers.Default*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"ut::Core2D::layers::Default"*/, 0, 0); } } });
 Object.defineProperties(ut.Core2D.layers.Default.StorageView, { cid: { configurable: true, get: function() { return ut.Core2D.layers.Default.cid; } } });
 ut.Core2D.layers.TransparentFX = function() {
 };
@@ -467,10 +425,7 @@ Object.defineProperties(ut.Core2D.layers.TransparentFX.StorageView.prototype, {
 });
 ut.Core2D.layers.TransparentFX._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // ut.Core2D.layers.TransparentFX is a POD type, so a JavaScript side copy constructor ut.Core2D.layers.TransparentFX._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-ut.Core2D.layers.TransparentFX._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.Core2D.layers.TransparentFX', 1, []);
-})();
-Object.defineProperties(ut.Core2D.layers.TransparentFX, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.TransparentFX.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.TransparentFX.cid = Module._ut_component_register_cid_with_type(ut.Core2D.layers.TransparentFX._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(ut.Core2D.layers.TransparentFX, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.TransparentFX.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.TransparentFX.cid = Module._ut_component_register_cid(/*ut.Core2D.layers.TransparentFX*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"ut::Core2D::layers::TransparentFX"*/, 0, 0); } } });
 Object.defineProperties(ut.Core2D.layers.TransparentFX.StorageView, { cid: { configurable: true, get: function() { return ut.Core2D.layers.TransparentFX.cid; } } });
 ut.Core2D.layers.IgnoreRaycast = function() {
 };
@@ -510,10 +465,7 @@ Object.defineProperties(ut.Core2D.layers.IgnoreRaycast.StorageView.prototype, {
 });
 ut.Core2D.layers.IgnoreRaycast._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // ut.Core2D.layers.IgnoreRaycast is a POD type, so a JavaScript side copy constructor ut.Core2D.layers.IgnoreRaycast._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-ut.Core2D.layers.IgnoreRaycast._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.Core2D.layers.IgnoreRaycast', 1, []);
-})();
-Object.defineProperties(ut.Core2D.layers.IgnoreRaycast, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.IgnoreRaycast.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.IgnoreRaycast.cid = Module._ut_component_register_cid_with_type(ut.Core2D.layers.IgnoreRaycast._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(ut.Core2D.layers.IgnoreRaycast, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.IgnoreRaycast.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.IgnoreRaycast.cid = Module._ut_component_register_cid(/*ut.Core2D.layers.IgnoreRaycast*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"ut::Core2D::layers::IgnoreRaycast"*/, 0, 0); } } });
 Object.defineProperties(ut.Core2D.layers.IgnoreRaycast.StorageView, { cid: { configurable: true, get: function() { return ut.Core2D.layers.IgnoreRaycast.cid; } } });
 ut.Core2D.layers.Water = function() {
 };
@@ -553,10 +505,7 @@ Object.defineProperties(ut.Core2D.layers.Water.StorageView.prototype, {
 });
 ut.Core2D.layers.Water._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // ut.Core2D.layers.Water is a POD type, so a JavaScript side copy constructor ut.Core2D.layers.Water._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-ut.Core2D.layers.Water._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.Core2D.layers.Water', 1, []);
-})();
-Object.defineProperties(ut.Core2D.layers.Water, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.Water.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.Water.cid = Module._ut_component_register_cid_with_type(ut.Core2D.layers.Water._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(ut.Core2D.layers.Water, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.Water.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.Water.cid = Module._ut_component_register_cid(/*ut.Core2D.layers.Water*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"ut::Core2D::layers::Water"*/, 0, 0); } } });
 Object.defineProperties(ut.Core2D.layers.Water.StorageView, { cid: { configurable: true, get: function() { return ut.Core2D.layers.Water.cid; } } });
 ut.Core2D.layers.UI = function() {
 };
@@ -596,10 +545,7 @@ Object.defineProperties(ut.Core2D.layers.UI.StorageView.prototype, {
 });
 ut.Core2D.layers.UI._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // ut.Core2D.layers.UI is a POD type, so a JavaScript side copy constructor ut.Core2D.layers.UI._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-ut.Core2D.layers.UI._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.Core2D.layers.UI', 1, []);
-})();
-Object.defineProperties(ut.Core2D.layers.UI, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.UI.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.UI.cid = Module._ut_component_register_cid_with_type(ut.Core2D.layers.UI._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(ut.Core2D.layers.UI, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.UI.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.UI.cid = Module._ut_component_register_cid(/*ut.Core2D.layers.UI*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"ut::Core2D::layers::UI"*/, 0, 0); } } });
 Object.defineProperties(ut.Core2D.layers.UI.StorageView, { cid: { configurable: true, get: function() { return ut.Core2D.layers.UI.cid; } } });
 ut.Core2D.layers.Grid = function() {
 };
@@ -639,10 +585,7 @@ Object.defineProperties(ut.Core2D.layers.Grid.StorageView.prototype, {
 });
 ut.Core2D.layers.Grid._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // ut.Core2D.layers.Grid is a POD type, so a JavaScript side copy constructor ut.Core2D.layers.Grid._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-ut.Core2D.layers.Grid._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.Core2D.layers.Grid', 1, []);
-})();
-Object.defineProperties(ut.Core2D.layers.Grid, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.Grid.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.Grid.cid = Module._ut_component_register_cid_with_type(ut.Core2D.layers.Grid._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(ut.Core2D.layers.Grid, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.Grid.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.Grid.cid = Module._ut_component_register_cid(/*ut.Core2D.layers.Grid*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"ut::Core2D::layers::Grid"*/, 0, 0); } } });
 Object.defineProperties(ut.Core2D.layers.Grid.StorageView, { cid: { configurable: true, get: function() { return ut.Core2D.layers.Grid.cid; } } });
 ut.Core2D.layers.Cutscene = function() {
 };
@@ -682,10 +625,7 @@ Object.defineProperties(ut.Core2D.layers.Cutscene.StorageView.prototype, {
 });
 ut.Core2D.layers.Cutscene._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // ut.Core2D.layers.Cutscene is a POD type, so a JavaScript side copy constructor ut.Core2D.layers.Cutscene._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-ut.Core2D.layers.Cutscene._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.Core2D.layers.Cutscene', 1, []);
-})();
-Object.defineProperties(ut.Core2D.layers.Cutscene, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.Cutscene.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.Cutscene.cid = Module._ut_component_register_cid_with_type(ut.Core2D.layers.Cutscene._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(ut.Core2D.layers.Cutscene, { cid: { configurable: true, get: function() { delete ut.Core2D.layers.Cutscene.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.Core2D.layers.Cutscene.cid = Module._ut_component_register_cid(/*ut.Core2D.layers.Cutscene*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"ut::Core2D::layers::Cutscene"*/, 0, 0); } } });
 Object.defineProperties(ut.Core2D.layers.Cutscene.StorageView, { cid: { configurable: true, get: function() { return ut.Core2D.layers.Cutscene.cid; } } });
 ut.EditorExtensions = ut.EditorExtensions || {};
 ut.EditorExtensions.AssetReferenceAnimationClip = function(arg0, arg1, arg2) {
@@ -765,20 +705,11 @@ ut.EditorExtensions.AssetReferenceAnimationClip._dtorFn = function dtor(ptr) {
   Module._ut_nativestring_placement_delete(ptr + 0);
 };
 ut.EditorExtensions.AssetReferenceAnimationClip._copyFn = function copy(src, dst) {
-  if (!src) throw 'copy function src ptr is null!';
-  if (!dst) throw 'copy function dst ptr is null!';
   Module._ut_nativestring_copy_construct(dst + 0, src + 0);
   for(var i = 0; i < 8; ++i) HEAPU8[dst+8+i] = HEAPU8[src+8+i];
   for(var i = 0; i < 4; ++i) HEAPU8[dst+16+i] = HEAPU8[src+16+i];
 };
-ut.EditorExtensions.AssetReferenceAnimationClip._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.EditorExtensions.AssetReferenceAnimationClip', 24, [
-    {name: 'guid', offset: 0, type: ut.meta.getType('string')},
-    {name: 'fileId', offset: 8, type: ut.meta.getType('int64')},
-    {name: 'type', offset: 16, type: ut.meta.getType('int32')}
-  ]);
-})();
-Object.defineProperties(ut.EditorExtensions.AssetReferenceAnimationClip, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceAnimationClip.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceAnimationClip.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.AssetReferenceAnimationClip._typeDesc, 8, 0, offsetsPtr, offsetsCount, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceAnimationClip._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceAnimationClip._copyFn)); } } });
+Object.defineProperties(ut.EditorExtensions.AssetReferenceAnimationClip, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceAnimationClip.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceAnimationClip.cid = Module._ut_component_register_cid(/*ut.EditorExtensions.AssetReferenceAnimationClip*/ 24, 8, 0, offsetsPtr, offsetsCount, 0/*"ut::EditorExtensions::AssetReferenceAnimationClip"*/, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceAnimationClip._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceAnimationClip._copyFn)); } } });
 Object.defineProperties(ut.EditorExtensions.AssetReferenceAnimationClip.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.AssetReferenceAnimationClip.cid; } } });
 ut.EditorExtensions.AssetReferenceAnimationClip.guid = { $ofs:0, $t:"System.String", $c:ut.EditorExtensions.AssetReferenceAnimationClip };
 ut.EditorExtensions.AssetReferenceAnimationClip.fileId = { $ofs:8, $t:"System.Int64", $c:ut.EditorExtensions.AssetReferenceAnimationClip };
@@ -860,20 +791,11 @@ ut.EditorExtensions.AssetReferenceAudioClip._dtorFn = function dtor(ptr) {
   Module._ut_nativestring_placement_delete(ptr + 0);
 };
 ut.EditorExtensions.AssetReferenceAudioClip._copyFn = function copy(src, dst) {
-  if (!src) throw 'copy function src ptr is null!';
-  if (!dst) throw 'copy function dst ptr is null!';
   Module._ut_nativestring_copy_construct(dst + 0, src + 0);
   for(var i = 0; i < 8; ++i) HEAPU8[dst+8+i] = HEAPU8[src+8+i];
   for(var i = 0; i < 4; ++i) HEAPU8[dst+16+i] = HEAPU8[src+16+i];
 };
-ut.EditorExtensions.AssetReferenceAudioClip._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.EditorExtensions.AssetReferenceAudioClip', 24, [
-    {name: 'guid', offset: 0, type: ut.meta.getType('string')},
-    {name: 'fileId', offset: 8, type: ut.meta.getType('int64')},
-    {name: 'type', offset: 16, type: ut.meta.getType('int32')}
-  ]);
-})();
-Object.defineProperties(ut.EditorExtensions.AssetReferenceAudioClip, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceAudioClip.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceAudioClip.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.AssetReferenceAudioClip._typeDesc, 8, 0, offsetsPtr, offsetsCount, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceAudioClip._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceAudioClip._copyFn)); } } });
+Object.defineProperties(ut.EditorExtensions.AssetReferenceAudioClip, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceAudioClip.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceAudioClip.cid = Module._ut_component_register_cid(/*ut.EditorExtensions.AssetReferenceAudioClip*/ 24, 8, 0, offsetsPtr, offsetsCount, 0/*"ut::EditorExtensions::AssetReferenceAudioClip"*/, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceAudioClip._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceAudioClip._copyFn)); } } });
 Object.defineProperties(ut.EditorExtensions.AssetReferenceAudioClip.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.AssetReferenceAudioClip.cid; } } });
 ut.EditorExtensions.AssetReferenceAudioClip.guid = { $ofs:0, $t:"System.String", $c:ut.EditorExtensions.AssetReferenceAudioClip };
 ut.EditorExtensions.AssetReferenceAudioClip.fileId = { $ofs:8, $t:"System.Int64", $c:ut.EditorExtensions.AssetReferenceAudioClip };
@@ -955,20 +877,11 @@ ut.EditorExtensions.AssetReferenceSprite._dtorFn = function dtor(ptr) {
   Module._ut_nativestring_placement_delete(ptr + 0);
 };
 ut.EditorExtensions.AssetReferenceSprite._copyFn = function copy(src, dst) {
-  if (!src) throw 'copy function src ptr is null!';
-  if (!dst) throw 'copy function dst ptr is null!';
   Module._ut_nativestring_copy_construct(dst + 0, src + 0);
   for(var i = 0; i < 8; ++i) HEAPU8[dst+8+i] = HEAPU8[src+8+i];
   for(var i = 0; i < 4; ++i) HEAPU8[dst+16+i] = HEAPU8[src+16+i];
 };
-ut.EditorExtensions.AssetReferenceSprite._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.EditorExtensions.AssetReferenceSprite', 24, [
-    {name: 'guid', offset: 0, type: ut.meta.getType('string')},
-    {name: 'fileId', offset: 8, type: ut.meta.getType('int64')},
-    {name: 'type', offset: 16, type: ut.meta.getType('int32')}
-  ]);
-})();
-Object.defineProperties(ut.EditorExtensions.AssetReferenceSprite, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceSprite.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceSprite.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.AssetReferenceSprite._typeDesc, 8, 0, offsetsPtr, offsetsCount, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceSprite._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceSprite._copyFn)); } } });
+Object.defineProperties(ut.EditorExtensions.AssetReferenceSprite, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceSprite.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceSprite.cid = Module._ut_component_register_cid(/*ut.EditorExtensions.AssetReferenceSprite*/ 24, 8, 0, offsetsPtr, offsetsCount, 0/*"ut::EditorExtensions::AssetReferenceSprite"*/, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceSprite._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceSprite._copyFn)); } } });
 Object.defineProperties(ut.EditorExtensions.AssetReferenceSprite.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.AssetReferenceSprite.cid; } } });
 ut.EditorExtensions.AssetReferenceSprite.guid = { $ofs:0, $t:"System.String", $c:ut.EditorExtensions.AssetReferenceSprite };
 ut.EditorExtensions.AssetReferenceSprite.fileId = { $ofs:8, $t:"System.Int64", $c:ut.EditorExtensions.AssetReferenceSprite };
@@ -1050,20 +963,11 @@ ut.EditorExtensions.AssetReferenceSpriteAtlas._dtorFn = function dtor(ptr) {
   Module._ut_nativestring_placement_delete(ptr + 0);
 };
 ut.EditorExtensions.AssetReferenceSpriteAtlas._copyFn = function copy(src, dst) {
-  if (!src) throw 'copy function src ptr is null!';
-  if (!dst) throw 'copy function dst ptr is null!';
   Module._ut_nativestring_copy_construct(dst + 0, src + 0);
   for(var i = 0; i < 8; ++i) HEAPU8[dst+8+i] = HEAPU8[src+8+i];
   for(var i = 0; i < 4; ++i) HEAPU8[dst+16+i] = HEAPU8[src+16+i];
 };
-ut.EditorExtensions.AssetReferenceSpriteAtlas._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.EditorExtensions.AssetReferenceSpriteAtlas', 24, [
-    {name: 'guid', offset: 0, type: ut.meta.getType('string')},
-    {name: 'fileId', offset: 8, type: ut.meta.getType('int64')},
-    {name: 'type', offset: 16, type: ut.meta.getType('int32')}
-  ]);
-})();
-Object.defineProperties(ut.EditorExtensions.AssetReferenceSpriteAtlas, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceSpriteAtlas.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceSpriteAtlas.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.AssetReferenceSpriteAtlas._typeDesc, 8, 0, offsetsPtr, offsetsCount, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceSpriteAtlas._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceSpriteAtlas._copyFn)); } } });
+Object.defineProperties(ut.EditorExtensions.AssetReferenceSpriteAtlas, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceSpriteAtlas.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceSpriteAtlas.cid = Module._ut_component_register_cid(/*ut.EditorExtensions.AssetReferenceSpriteAtlas*/ 24, 8, 0, offsetsPtr, offsetsCount, 0/*"ut::EditorExtensions::AssetReferenceSpriteAtlas"*/, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceSpriteAtlas._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceSpriteAtlas._copyFn)); } } });
 Object.defineProperties(ut.EditorExtensions.AssetReferenceSpriteAtlas.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.AssetReferenceSpriteAtlas.cid; } } });
 ut.EditorExtensions.AssetReferenceSpriteAtlas.guid = { $ofs:0, $t:"System.String", $c:ut.EditorExtensions.AssetReferenceSpriteAtlas };
 ut.EditorExtensions.AssetReferenceSpriteAtlas.fileId = { $ofs:8, $t:"System.Int64", $c:ut.EditorExtensions.AssetReferenceSpriteAtlas };
@@ -1145,20 +1049,11 @@ ut.EditorExtensions.AssetReferenceTexture2D._dtorFn = function dtor(ptr) {
   Module._ut_nativestring_placement_delete(ptr + 0);
 };
 ut.EditorExtensions.AssetReferenceTexture2D._copyFn = function copy(src, dst) {
-  if (!src) throw 'copy function src ptr is null!';
-  if (!dst) throw 'copy function dst ptr is null!';
   Module._ut_nativestring_copy_construct(dst + 0, src + 0);
   for(var i = 0; i < 8; ++i) HEAPU8[dst+8+i] = HEAPU8[src+8+i];
   for(var i = 0; i < 4; ++i) HEAPU8[dst+16+i] = HEAPU8[src+16+i];
 };
-ut.EditorExtensions.AssetReferenceTexture2D._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.EditorExtensions.AssetReferenceTexture2D', 24, [
-    {name: 'guid', offset: 0, type: ut.meta.getType('string')},
-    {name: 'fileId', offset: 8, type: ut.meta.getType('int64')},
-    {name: 'type', offset: 16, type: ut.meta.getType('int32')}
-  ]);
-})();
-Object.defineProperties(ut.EditorExtensions.AssetReferenceTexture2D, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceTexture2D.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceTexture2D.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.AssetReferenceTexture2D._typeDesc, 8, 0, offsetsPtr, offsetsCount, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceTexture2D._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceTexture2D._copyFn)); } } });
+Object.defineProperties(ut.EditorExtensions.AssetReferenceTexture2D, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceTexture2D.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceTexture2D.cid = Module._ut_component_register_cid(/*ut.EditorExtensions.AssetReferenceTexture2D*/ 24, 8, 0, offsetsPtr, offsetsCount, 0/*"ut::EditorExtensions::AssetReferenceTexture2D"*/, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceTexture2D._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceTexture2D._copyFn)); } } });
 Object.defineProperties(ut.EditorExtensions.AssetReferenceTexture2D.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.AssetReferenceTexture2D.cid; } } });
 ut.EditorExtensions.AssetReferenceTexture2D.guid = { $ofs:0, $t:"System.String", $c:ut.EditorExtensions.AssetReferenceTexture2D };
 ut.EditorExtensions.AssetReferenceTexture2D.fileId = { $ofs:8, $t:"System.Int64", $c:ut.EditorExtensions.AssetReferenceTexture2D };
@@ -1240,20 +1135,11 @@ ut.EditorExtensions.AssetReferenceTileBase._dtorFn = function dtor(ptr) {
   Module._ut_nativestring_placement_delete(ptr + 0);
 };
 ut.EditorExtensions.AssetReferenceTileBase._copyFn = function copy(src, dst) {
-  if (!src) throw 'copy function src ptr is null!';
-  if (!dst) throw 'copy function dst ptr is null!';
   Module._ut_nativestring_copy_construct(dst + 0, src + 0);
   for(var i = 0; i < 8; ++i) HEAPU8[dst+8+i] = HEAPU8[src+8+i];
   for(var i = 0; i < 4; ++i) HEAPU8[dst+16+i] = HEAPU8[src+16+i];
 };
-ut.EditorExtensions.AssetReferenceTileBase._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.EditorExtensions.AssetReferenceTileBase', 24, [
-    {name: 'guid', offset: 0, type: ut.meta.getType('string')},
-    {name: 'fileId', offset: 8, type: ut.meta.getType('int64')},
-    {name: 'type', offset: 16, type: ut.meta.getType('int32')}
-  ]);
-})();
-Object.defineProperties(ut.EditorExtensions.AssetReferenceTileBase, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceTileBase.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceTileBase.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.AssetReferenceTileBase._typeDesc, 8, 0, offsetsPtr, offsetsCount, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceTileBase._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceTileBase._copyFn)); } } });
+Object.defineProperties(ut.EditorExtensions.AssetReferenceTileBase, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceTileBase.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceTileBase.cid = Module._ut_component_register_cid(/*ut.EditorExtensions.AssetReferenceTileBase*/ 24, 8, 0, offsetsPtr, offsetsCount, 0/*"ut::EditorExtensions::AssetReferenceTileBase"*/, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceTileBase._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceTileBase._copyFn)); } } });
 Object.defineProperties(ut.EditorExtensions.AssetReferenceTileBase.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.AssetReferenceTileBase.cid; } } });
 ut.EditorExtensions.AssetReferenceTileBase.guid = { $ofs:0, $t:"System.String", $c:ut.EditorExtensions.AssetReferenceTileBase };
 ut.EditorExtensions.AssetReferenceTileBase.fileId = { $ofs:8, $t:"System.Int64", $c:ut.EditorExtensions.AssetReferenceTileBase };
@@ -1335,20 +1221,11 @@ ut.EditorExtensions.AssetReferenceTMP_FontAsset._dtorFn = function dtor(ptr) {
   Module._ut_nativestring_placement_delete(ptr + 0);
 };
 ut.EditorExtensions.AssetReferenceTMP_FontAsset._copyFn = function copy(src, dst) {
-  if (!src) throw 'copy function src ptr is null!';
-  if (!dst) throw 'copy function dst ptr is null!';
   Module._ut_nativestring_copy_construct(dst + 0, src + 0);
   for(var i = 0; i < 8; ++i) HEAPU8[dst+8+i] = HEAPU8[src+8+i];
   for(var i = 0; i < 4; ++i) HEAPU8[dst+16+i] = HEAPU8[src+16+i];
 };
-ut.EditorExtensions.AssetReferenceTMP_FontAsset._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.EditorExtensions.AssetReferenceTMP_FontAsset', 24, [
-    {name: 'guid', offset: 0, type: ut.meta.getType('string')},
-    {name: 'fileId', offset: 8, type: ut.meta.getType('int64')},
-    {name: 'type', offset: 16, type: ut.meta.getType('int32')}
-  ]);
-})();
-Object.defineProperties(ut.EditorExtensions.AssetReferenceTMP_FontAsset, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceTMP_FontAsset.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceTMP_FontAsset.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.AssetReferenceTMP_FontAsset._typeDesc, 8, 0, offsetsPtr, offsetsCount, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceTMP_FontAsset._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceTMP_FontAsset._copyFn)); } } });
+Object.defineProperties(ut.EditorExtensions.AssetReferenceTMP_FontAsset, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.AssetReferenceTMP_FontAsset.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.AssetReferenceTMP_FontAsset.cid = Module._ut_component_register_cid(/*ut.EditorExtensions.AssetReferenceTMP_FontAsset*/ 24, 8, 0, offsetsPtr, offsetsCount, 0/*"ut::EditorExtensions::AssetReferenceTMP_FontAsset"*/, ut.DestructorFn._cb.token_for(ut.EditorExtensions.AssetReferenceTMP_FontAsset._dtorFn), ut.CopyFn._cb.token_for(ut.EditorExtensions.AssetReferenceTMP_FontAsset._copyFn)); } } });
 Object.defineProperties(ut.EditorExtensions.AssetReferenceTMP_FontAsset.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.AssetReferenceTMP_FontAsset.cid; } } });
 ut.EditorExtensions.AssetReferenceTMP_FontAsset.guid = { $ofs:0, $t:"System.String", $c:ut.EditorExtensions.AssetReferenceTMP_FontAsset };
 ut.EditorExtensions.AssetReferenceTMP_FontAsset.fileId = { $ofs:8, $t:"System.Int64", $c:ut.EditorExtensions.AssetReferenceTMP_FontAsset };
@@ -1403,12 +1280,7 @@ Object.defineProperties(ut.EditorExtensions.CameraCullingMask.StorageView.protot
 });
 ut.EditorExtensions.CameraCullingMask._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // ut.EditorExtensions.CameraCullingMask is a POD type, so a JavaScript side copy constructor ut.EditorExtensions.CameraCullingMask._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-ut.EditorExtensions.CameraCullingMask._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.EditorExtensions.CameraCullingMask', 4, [
-    {name: 'mask', offset: 0, type: ut.meta.getType('int32')}
-  ]);
-})();
-Object.defineProperties(ut.EditorExtensions.CameraCullingMask, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.CameraCullingMask.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.CameraCullingMask.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.CameraCullingMask._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(ut.EditorExtensions.CameraCullingMask, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.CameraCullingMask.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.CameraCullingMask.cid = Module._ut_component_register_cid(/*ut.EditorExtensions.CameraCullingMask*/ 4, 4, 0, offsetsPtr, offsetsCount, 0/*"ut::EditorExtensions::CameraCullingMask"*/, 0, 0); } } });
 Object.defineProperties(ut.EditorExtensions.CameraCullingMask.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.CameraCullingMask.cid; } } });
 ut.EditorExtensions.CameraCullingMask.mask = { $ofs:0, $t:"int32_t", $c:ut.EditorExtensions.CameraCullingMask };
 ut.EditorExtensions.EntityLayer = function(arg0) {
@@ -1461,12 +1333,7 @@ Object.defineProperties(ut.EditorExtensions.EntityLayer.StorageView.prototype, {
 });
 ut.EditorExtensions.EntityLayer._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // ut.EditorExtensions.EntityLayer is a POD type, so a JavaScript side copy constructor ut.EditorExtensions.EntityLayer._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-ut.EditorExtensions.EntityLayer._typeDesc = (function() {
-  return ut.meta.allocType(5, 'ut.EditorExtensions.EntityLayer', 4, [
-    {name: 'layer', offset: 0, type: ut.meta.getType('int32')}
-  ]);
-})();
-Object.defineProperties(ut.EditorExtensions.EntityLayer, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.EntityLayer.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.EntityLayer.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.EntityLayer._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(ut.EditorExtensions.EntityLayer, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.EntityLayer.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.EntityLayer.cid = Module._ut_component_register_cid(/*ut.EditorExtensions.EntityLayer*/ 4, 4, 0, offsetsPtr, offsetsCount, 0/*"ut::EditorExtensions::EntityLayer"*/, 0, 0); } } });
 Object.defineProperties(ut.EditorExtensions.EntityLayer.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.EntityLayer.cid; } } });
 ut.EditorExtensions.EntityLayer.layer = { $ofs:0, $t:"int32_t", $c:ut.EditorExtensions.EntityLayer };
 game.MainStartJS = ut.System.define({

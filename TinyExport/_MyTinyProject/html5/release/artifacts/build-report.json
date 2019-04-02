@@ -12,9 +12,9 @@
         },
         "Children": [{
             "Item": {
-                "Name": "TinyExport/_MyTinyProject/html5/development/build/runtime.js",
-                "Size": 5664364,
-                "CompressedSize": 700818
+                "Name": "TinyExport/_MyTinyProject/html5/release/build/runtime.js",
+                "Size": 885164,
+                "CompressedSize": 166541
             }
         }]
     }, {
@@ -26,7 +26,7 @@
         "Children": [{
             "Item": {
                 "Name": "JavaScript",
-                "Size": 312699,
+                "Size": 237675,
                 "CompressedSize": 0
             }
         }, {
@@ -37,16 +37,16 @@
             },
             "Children": [{
                 "Item": {
-                    "Name": "TinyExport/_MyTinyProject/html5/development/artifacts/assets/sactx-2048x2048-Uncompressed-JokingHazardSpriteAtlas-686f0fb3.jpg",
-                    "Size": 813752,
-                    "CompressedSize": 531631,
+                    "Name": "TinyExport/_MyTinyProject/html5/release/artifacts/assets/sactx-2048x2048-Uncompressed-JokingHazardSpriteAtlas-686f0fb3.jpg",
+                    "Size": 580120,
+                    "CompressedSize": 387292,
                     "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 16, "Type": 0 }
                 }
             }, {
                 "Item": {
-                    "Name": "TinyExport/_MyTinyProject/html5/development/artifacts/assets/sactx-2048x2048-Uncompressed-JokingHazardSpriteAtlas-686f0fb3_a.png",
-                    "Size": 82392,
-                    "CompressedSize": 2612,
+                    "Name": "TinyExport/_MyTinyProject/html5/release/artifacts/assets/sactx-2048x2048-Uncompressed-JokingHazardSpriteAtlas-686f0fb3_a.png",
+                    "Size": 8736,
+                    "CompressedSize": 486,
                     "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 16, "Type": 0 }
                 }
             }]
@@ -59,9 +59,9 @@
         },
         "Children": [{
             "Item": {
-                "Name": "TinyExport/_MyTinyProject/html5/development/build/entities.js",
-                "Size": 14439,
-                "CompressedSize": 2178
+                "Name": "TinyExport/_MyTinyProject/html5/release/build/entities.js",
+                "Size": 14321,
+                "CompressedSize": 2184
             },
             "Children": [{
                 "Item": {
@@ -78,40 +78,34 @@
             }, {
                 "Item": {
                     "Name": "Start",
-                    "Size": 3492,
-                    "CompressedSize": 888
+                    "Size": 3374,
+                    "CompressedSize": 868
                 }
             }]
         }, {
             "Item": {
-                "Name": "TinyExport/_MyTinyProject/html5/development/build/bindings.js",
-                "Size": 93472,
-                "CompressedSize": 7769
+                "Name": "TinyExport/_MyTinyProject/html5/release/build/bindings.js",
+                "Size": 87730,
+                "CompressedSize": 7270
             }
         }, {
             "Item": {
-                "Name": "Linked Code Files",
-                "Size": 0,
-                "CompressedSize": 0
+                "Name": "TinyExport/_MyTinyProject/html5/release/build/code.js",
+                "Size": 14334,
+                "CompressedSize": 3460
             },
             "Children": [{
                 "Item": {
-                    "Name": "TinyExport/_MyTinyProject/html5/development/artifacts/scripts/tsc-emit.js",
+                    "Name": "TinyExport/_MyTinyProject/html5/release/artifacts/scripts/tsc-emit.js",
                     "Size": 14244,
                     "CompressedSize": 3383
                 }
             }]
         }, {
             "Item": {
-                "Name": "TinyExport/_MyTinyProject/html5/development/build/main.js",
-                "Size": 2538,
-                "CompressedSize": 840
-            }
-        }, {
-            "Item": {
-                "Name": "TinyExport/_MyTinyProject/html5/development/build/wsclient.js",
-                "Size": 9651,
-                "CompressedSize": 2635
+                "Name": "TinyExport/_MyTinyProject/html5/release/build/main.js",
+                "Size": 2427,
+                "CompressedSize": 800
             }
         }]
     }]

@@ -3,6 +3,22 @@
  */
 // In order to process bindings, we first need type registry from compiled code to be available.
 ut.meta.registerTypes();
+var game = game || {};
+game.State = {
+  INIT: 0,
+  WAIT: 1,
+  GET_JUDGE_CARD: 2,
+  SEND_CARD: 3
+};
+game.State._typeDesc = (function() {
+  var enumType = ut.meta.getType('int32');
+  return ut.meta.allocType(6, 'game.State', 4, [
+    {name: 'INIT', offset: 0, type: enumType},
+    {name: 'WAIT', offset: 1, type: enumType},
+    {name: 'GET_JUDGE_CARD', offset: 2, type: enumType},
+    {name: 'SEND_CARD', offset: 3, type: enumType}
+  ]);
+})();
 var entities = entities || {};
 entities.game = entities.game || {};
 entities.game.CardsInHand = entities.game.CardsInHand || {};
@@ -137,7 +153,6 @@ entities.game.Start.Component._typeDesc = (function() {
 })();
 Object.defineProperties(entities.game.Start.Component, { cid: { configurable: true, get: function() { delete entities.game.Start.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.Start.Component.cid = Module._ut_component_register_cid_with_type(entities.game.Start.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
 Object.defineProperties(entities.game.Start.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.Start.Component.cid; } } });
-var game = game || {};
 game.CardTag = function(arg0, arg1) {
   this._Position = (arg0|0);
   this._IsInHand = (arg1 ? true : false);
@@ -210,13 +225,14 @@ Object.defineProperties(game.CardTag, { cid: { configurable: true, get: function
 Object.defineProperties(game.CardTag.StorageView, { cid: { configurable: true, get: function() { return game.CardTag.cid; } } });
 game.CardTag.Position = { $ofs:0, $t:"int8_t", $c:game.CardTag };
 game.CardTag.IsInHand = { $ofs:1, $t:"bool", $c:game.CardTag };
-game.GameConfig = function(arg0, arg1, arg2, arg3, arg4, arg5) {
+game.GameConfig = function(arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
   this._PlayerId = (arg0 === undefined ? '' : arg0);
   this._RoomId = (arg1 === undefined ? '' : arg1);
   this._IsJudge = (arg2 ? true : false);
   this._FieldCards = (arg3 === undefined ? new Array() : ((arg3 instanceof Array) ? arg3 : (function() { throw new Error('Assigning non-array to array field'); })()));
   this._CanPlay = (arg4 ? true : false);
   this._HandCards = (arg5 === undefined ? new Array() : ((arg5 instanceof Array) ? arg5 : (function() { throw new Error('Assigning non-array to array field'); })()));
+  this._State = (arg6|0);
 };
 game.GameConfig.prototype = Object.create(null);
 game.GameConfig.prototype.constructor = game.GameConfig;
@@ -245,8 +261,12 @@ Object.defineProperties(game.GameConfig.prototype, {
     get: function() { return this._HandCards; },
     set: function(v) { this._HandCards = (v === undefined ? new Array() : ((v instanceof Array) ? v : (function() { throw new Error('Assigning non-array to array field'); })())); },
   },
+  State: {
+    get: function() { return this._State; },
+    set: function(v) { this._State = (v|0); },
+  },
 });
-game.GameConfig._size = 48;
+game.GameConfig._size = 52;
 game.GameConfig._fromPtr = function(ptr, v) {
   v = v || Object.create(game.GameConfig.prototype);
   v._PlayerId = (Module._ut_nativestring_data(ptr+0) ? UTF8ToString(Module._ut_nativestring_data(ptr+0)) : "");
@@ -255,6 +275,7 @@ game.GameConfig._fromPtr = function(ptr, v) {
   v._FieldCards = ut.nativeBufferToJsArray(ptr+20, 8, function(p) { return (Module._ut_nativestring_data(p) ? UTF8ToString(Module._ut_nativestring_data(p)) : ""); });
   v._CanPlay = (HEAP8[ptr+32]?true:false);
   v._HandCards = ut.nativeBufferToJsArray(ptr+36, 8, function(p) { return (Module._ut_nativestring_data(p) ? UTF8ToString(Module._ut_nativestring_data(p)) : ""); });
+  v._State = HEAP32[(ptr+48)>>2];
   return v;
 };
 game.GameConfig._toPtr = function(ptr, v) {
@@ -264,6 +285,7 @@ game.GameConfig._toPtr = function(ptr, v) {
   ut.jsArrayToExistingNativeBuffer_string(v.FieldCards, ptr+20, function(p, v) { ut.writeHeapNativeString(p, v); });
   HEAP8[ptr+32] = (v.CanPlay)?1:0;
   ut.jsArrayToExistingNativeBuffer_string(v.HandCards, ptr+36, function(p, v) { ut.writeHeapNativeString(p, v); });
+  HEAP32[(ptr+48)>>2] = v.State;
 };
 game.GameConfig._toTempHeapPtr = function(ptr, v) {
   ut.toExistingScratchNativeString(ptr+0, v.PlayerId);
@@ -272,9 +294,10 @@ game.GameConfig._toTempHeapPtr = function(ptr, v) {
   ut.jsArrayToExistingScratchNativeBuffer_string(v.FieldCards, ptr+20, function(p, v) { ut.toExistingScratchNativeString(p, v); });
   HEAP8[ptr+32] = (v.CanPlay)?1:0;
   ut.jsArrayToExistingScratchNativeBuffer_string(v.HandCards, ptr+36, function(p, v) { ut.toExistingScratchNativeString(p, v); });
+  HEAP32[(ptr+48)>>2] = v.State;
 };
 game.GameConfig._tempHeapPtr = function(v) {
-  var ptr = ut.tempHeapPtrBufferZero(48);
+  var ptr = ut.tempHeapPtrBufferZero(52);
   if (v) game.GameConfig._toTempHeapPtr(ptr, v);
   return ptr;
 };
@@ -290,7 +313,7 @@ game.GameConfig.StorageView._toPtr = game.GameConfig._toPtr;
 game.GameConfig.StorageView._tempHeapPtr = game.GameConfig._tempHeapPtr;
 game.GameConfig.StorageView._size = game.GameConfig._size;
 game.GameConfig.StorageView.prototype.$advance = function() {
-  this._ptr += 48;
+  this._ptr += 52;
 };
 Object.defineProperties(game.GameConfig.StorageView.prototype, {
   PlayerId: {
@@ -317,6 +340,10 @@ Object.defineProperties(game.GameConfig.StorageView.prototype, {
     get: function() { return ut.nativeBufferToJsArray(this._ptr+36, 8, function(p) { return (Module._ut_nativestring_data(p) ? UTF8ToString(Module._ut_nativestring_data(p)) : ""); }); },
     set: function(v) { ut.jsArrayToExistingNativeBuffer_string(v, this._ptr+36, function(p, v) { ut.writeHeapNativeString(p, v); }); },
   },
+  State: {
+    get: function() { return HEAP32[(this._ptr+48)>>2]; },
+    set: function(v) { HEAP32[(this._ptr+48)>>2] = v; },
+  },
 });
 game.GameConfig._dtorFn = function dtor(ptr) {
   if (!ptr) return; 
@@ -334,15 +361,17 @@ game.GameConfig._copyFn = function copy(src, dst) {
   Module._ut_nativebuffer_nativestring_copy_construct(dst + 20, src + 20);
   for(var i = 0; i < 1; ++i) HEAPU8[dst+32+i] = HEAPU8[src+32+i];
   Module._ut_nativebuffer_nativestring_copy_construct(dst + 36, src + 36);
+  for(var i = 0; i < 4; ++i) HEAPU8[dst+48+i] = HEAPU8[src+48+i];
 };
 game.GameConfig._typeDesc = (function() {
-  return ut.meta.allocType(5, 'game.GameConfig', 48, [
+  return ut.meta.allocType(5, 'game.GameConfig', 52, [
     {name: 'PlayerId', offset: 0, type: ut.meta.getType('string')},
     {name: 'RoomId', offset: 8, type: ut.meta.getType('string')},
     {name: 'IsJudge', offset: 16, type: ut.meta.getType('bool')},
     {name: 'FieldCards', offset: 20, type: ut.meta.getType('ut.NativeBuffer<string>')},
     {name: 'CanPlay', offset: 32, type: ut.meta.getType('bool')},
-    {name: 'HandCards', offset: 36, type: ut.meta.getType('ut.NativeBuffer<string>')}
+    {name: 'HandCards', offset: 36, type: ut.meta.getType('ut.NativeBuffer<string>')},
+    {name: 'State', offset: 48, type: ut.meta.getType('game.State')}
   ]);
 })();
 Object.defineProperties(game.GameConfig, { cid: { configurable: true, get: function() { delete game.GameConfig.cid; var offsetsPtr = 0, offsetsCount = 0; return game.GameConfig.cid = Module._ut_component_register_cid_with_type(game.GameConfig._typeDesc, 4, 0, offsetsPtr, offsetsCount, ut.DestructorFn._cb.token_for(game.GameConfig._dtorFn), ut.CopyFn._cb.token_for(game.GameConfig._copyFn)); } } });
@@ -353,6 +382,7 @@ game.GameConfig.IsJudge = { $ofs:16, $t:"bool", $c:game.GameConfig };
 game.GameConfig.FieldCards = { $ofs:20, $t:"ut.DynamicArray`1", $c:game.GameConfig };
 game.GameConfig.CanPlay = { $ofs:32, $t:"bool", $c:game.GameConfig };
 game.GameConfig.HandCards = { $ofs:36, $t:"ut.DynamicArray`1", $c:game.GameConfig };
+game.GameConfig.State = { $ofs:48, $t:"game.State", $c:game.GameConfig };
 var ut = ut || {};
 ut.Core2D = ut.Core2D || {};
 ut.Core2D.layers = ut.Core2D.layers || {};
@@ -1439,8 +1469,8 @@ ut.EditorExtensions.EntityLayer._typeDesc = (function() {
 Object.defineProperties(ut.EditorExtensions.EntityLayer, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.EntityLayer.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.EntityLayer.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.EntityLayer._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
 Object.defineProperties(ut.EditorExtensions.EntityLayer.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.EntityLayer.cid; } } });
 ut.EditorExtensions.EntityLayer.layer = { $ofs:0, $t:"int32_t", $c:ut.EditorExtensions.EntityLayer };
-game.TestingJS = ut.System.define({
-  name: "game.TestingJS"
+game.MainStartJS = ut.System.define({
+  name: "game.MainStartJS"
 });
 game.SelectingCardJS = ut.System.define({
   name: "game.SelectingCardJS"

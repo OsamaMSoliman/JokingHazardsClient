@@ -2,7 +2,7 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "skipLibCheck": true,
-        "outFile": "F:/UnityProjects/TinyUnity/TinyExport/_MyTinyProject/html5/development/artifacts/scripts/tsc-emit.js",
+        "outFile": "F:/UnityProjects/JokingHazardsClient/TinyExport/_MyTinyProject/html5/development/artifacts/scripts/tsc-emit.js",
         "sourceMap": true,
         "target": "ES5"
     },

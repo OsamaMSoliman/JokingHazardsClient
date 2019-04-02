@@ -33,7 +33,7 @@
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "7ed1198534eb21949b46a6876ef0a72c", "FileId": 21300000, "Type": 3 }
+            "sprite": { "$TypeId": 10, "Guid": "29fc44cdaac267c408caccfd4c8777b6", "FileId": 21300000, "Type": 3 }
         }
     }, {
         "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
@@ -76,7 +76,7 @@
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "7ed1198534eb21949b46a6876ef0a72c", "FileId": 21300000, "Type": 3 }
+            "sprite": { "$TypeId": 10, "Guid": "29fc44cdaac267c408caccfd4c8777b6", "FileId": 21300000, "Type": 3 }
         }
     }, {
         "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
@@ -119,7 +119,7 @@
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "7ed1198534eb21949b46a6876ef0a72c", "FileId": 21300000, "Type": 3 }
+            "sprite": { "$TypeId": 10, "Guid": "29fc44cdaac267c408caccfd4c8777b6", "FileId": 21300000, "Type": 3 }
         }
     }, {
         "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },

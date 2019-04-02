@@ -29,25 +29,25 @@
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 50,
+            "Duration": 47,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 127,
+            "Duration": 118,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 541,
+            "Duration": 516,
             "Steps": 13
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 68,
+            "Duration": 52,
             "Steps": 2
         },
         {
@@ -65,6 +65,6 @@
         "F:/UnityProjects/JokingHazardsClient/Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "F:/UnityProjects/JokingHazardsClient/Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "aeb7eed07615569d25696d825a0ab670",
-    "GeneratedAt": "Tue Apr 02 2019 15:20:06 GMT+0200 (Egypt Standard Time)"
+    "InputHash": "4babd85394954eb85d8ec0ba1ed3eece",
+    "GeneratedAt": "Tue Apr 02 2019 13:29:31 GMT+0200 (Egypt Standard Time)"
 }

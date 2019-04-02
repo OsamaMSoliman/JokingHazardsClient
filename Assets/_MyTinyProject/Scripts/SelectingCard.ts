@@ -5,7 +5,7 @@ namespace game {
 
         static holder: ut.Entity = null
         buildUp: number = 0
-        selectdCardId = -1
+        selectdCardPos = -1
         // posSecAgo: Vector3 = new Vector3()
         // lastPosInY: number
 
@@ -35,7 +35,7 @@ namespace game {
                                 if (this.world.hasComponent(SelectingCard.holder, ut.Disabled)) {
                                     this.world.removeComponent(SelectingCard.holder, ut.Disabled);
                                 }
-                                this.selectdCardId = tag.Position
+                                this.selectdCardPos = tag.Position
                             }
                         }
                     })
@@ -52,12 +52,16 @@ namespace game {
                 // }
             }
 
+            if (!Utils.GameConfig || !Utils.GameConfig.CanPlay) return
+
             if (ut.Runtime.Input.getMouseButtonUp(0) || (ut.Runtime.Input.touchCount() == 1 && ut.Runtime.Input.getTouch(0).phase == ut.Core2D.TouchState.Ended)) {
                 // console.log("UP = " + this.selectdCardId);
-                if (this.selectdCardId != -1 && Utils.getPointerWorldPosition(this.world, this.world.getEntityByName("Camera")).y > 0) {
-                    console.log("selectdCardId = " + this.selectdCardId);
-                    //TODO: send it if player swiped up and change the card
-                    this.selectdCardId = -1
+                if (this.selectdCardPos != -1 && Utils.getPointerWorldPosition(this.world, this.world.getEntityByName("Camera")).y > 0) {
+                    console.log("selectdCardId = " + this.selectdCardPos);
+                    //TODO: send it if player swiped up 
+                    Utils.SendSelectdCardToServer(this.selectdCardPos)
+                    //TODO: change the card
+                    this.selectdCardPos = -1
                 }
             }
 

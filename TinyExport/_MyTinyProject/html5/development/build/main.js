@@ -26,9 +26,9 @@ ut.main = function() {
 
     // Schedule all systems
     var scheduler = world.scheduler();
-    game.TestingJS.update = new game.Testing()._MakeSystemFn();
+    game.MainStartJS.update = new game.MainStart()._MakeSystemFn();
     game.SelectingCardJS.update = new game.SelectingCard()._MakeSystemFn();
-    scheduler.schedule(game.TestingJS);
+    scheduler.schedule(game.MainStartJS);
     scheduler.schedule(game.SelectingCardJS);
     scheduler.schedule(ut.Core2D.SequencePlayerSystem);
     scheduler.schedule(ut.HTML.AssetLoader);
@@ -54,6 +54,7 @@ ut.main = function() {
     c0.renderMode = 0;
     world.setConfigData(c0);
     var c1 = world.getConfigData(game.GameConfig);
+    c1.State = 0;
     world.setConfigData(c1);
 
     // Create and initialize all resource entities
